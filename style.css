@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsl(198, 32%, 92%);
+  --color-orange: hsl(35, 100%, 50%);
+
+  --font-family-dancing: "Dancing Script", cursive;
+  --font-family-dmSans: "DM Sans", sans-serif;
+  --font-family-montSerrat: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main .hide {
+  display: none;
+}
+
+main {
+  background-color: var(--color-white);
+
+  width: 42.8rem;
+  min-height: 42.4rem;
+
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  font-family: var(--font-family-montSerrat);
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+
+  margin-bottom: 1.4rem;
+}
+
+p {
+  margin-bottom: 2.6rem;
+}
+
+.screen1 img:hover {
+  animation: vibrate-2 0.2s linear infinite both;
+  cursor: pointer;
+}
+
+.screen1 p {
+  font-family: var(--font-family-dmSans);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.screen2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+.screen2 p {
+  font-family: var(--font-family-dancing);
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+
+  background: var(--color-gray);
+  box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(85, 85, 85, 0.5);
+
+  animation: scale-up-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) reverse
+    both;
+}
+
+button {
+  background-color: var(--color-orange);
+
+  font-family: var(--font-family-dmSans);
+  font-weight: 700;
+  color: var(--color-white);
+
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  border: none;
+
+  width: 17.4rem;
+
+  cursor:pointer;
+}
+
+@keyframes vibrate-2 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes scale-up-right {
+  0% {
+  }
+  100% {
+    transform: translateY(150px) scale(0.5);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

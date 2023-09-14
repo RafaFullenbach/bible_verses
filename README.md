@@ -1,6 +1,9 @@
 # Bible verses
 
 The goal of the project is to learn about advanced Javascript.
+
+https://github.com/RafaFullenbach/bible_verses/assets/63618616/f2a5c038-ad75-4db7-9925-051449cd2cd3
+
 ## Apprenticeship
 
 - DOM manipulation;
